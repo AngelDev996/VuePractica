@@ -7,13 +7,29 @@
     <script src="https://unpkg.com/vue@3.0.2"></script>
 
     <title>Learning Vue</title>
+    <style>
+      .box{
+        padding: 100px 0;
+        width: 400px;
+        text-align: center;
+        background: #ddd;
+        margin: 20px;
+        display: inline-block;
+      }
+    </style>
   </head>
   <body>
 
       <h1>Hello, Vue</h1>
       <div id="app" >
        <div v-if="showBooks">
-        <p>{{title}} - {{author}} - {{age}}</p> <!--Variables que controlamos con vue -->
+         <ul>
+           <li v-for="item in books">
+             <h3>{{item.title}}</h3>
+             <p>{{item.author}}</p>
+           </li>
+         </ul>
+    
        </div>
         <button v-on:click="age++">Increase age</button>
         <button v-on:click="age--">Decrease age</button>
@@ -25,6 +41,15 @@
             <span v-if="!showBooks">Show Books</span> <!--Tambien podriamos poner v-else aqui -->
 
           </button>
+
+          <br>
+
+          <!--More mouse events-->
+          <div class="box" @mouseover="handleEvent">mouseover (enter)</div>
+          <div class="box" @mouseleave="handleEvent"> mouseleave</div>
+          <div class="box" @dblclick="handleEvent"> double click</div>
+          <div class="box" @mousemove="handleMousemove">position - {{x}}  {{y}}</div>
+
         </div>
 
     </div>  <!--Aqui esta controlando vue, due to app -->

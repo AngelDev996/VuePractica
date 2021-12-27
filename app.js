@@ -4,9 +4,11 @@ const app  =  Vue.createApp({
     data(){
         return{
             showBooks:true,
-            title: 'Harry Potter', 
-            author: 'JK Rowling',
-            age: 50,
+            books:[
+                {title:'Harry Potter', author:'J.K Rowling'},
+                {title:'Harry Potter2', author:'J.K Rowling'},
+                {title:'Harry Potter3', author:'J.K Rowling'},
+            ]
         }
     },
     methods:{
@@ -19,6 +21,15 @@ const app  =  Vue.createApp({
     },
     toggleShowBooks(){
         this.showBooks = !this.showBooks
+
+    },
+    handleEvent(){
+        console.log('handle');
+    },
+    handleMousemove(e){
+        this.x = e.offsetX
+        this.y = e.offsetY
+
 
     }
     }
