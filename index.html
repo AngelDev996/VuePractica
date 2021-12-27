@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+
+    <title>Learning Vue</title>
+  </head>
+  <body>
+
+      <h1>Hello, Vue</h1>
+      <div id="app" >
+       <div v-if="showBooks">
+        <p>{{title}} - {{author}} - {{age}}</p> <!--Variables que controlamos con vue -->
+       </div>
+        <button v-on:click="age++">Increase age</button>
+        <button v-on:click="age--">Decrease age</button>
+        <div @click="changeTitle">Change book title</div>
+        <div @click="changeTitle2('Los juegos del hambre')">Change book title2 </div>
+        <div>
+          <button @click="toggleShowBooks">
+            <span v-if="showBooks">Hide Books</span>
+            <span v-if="!showBooks">Show Books</span> <!--Tambien podriamos poner v-else aqui -->
+
+          </button>
+        </div>
+
+    </div>  <!--Aqui esta controlando vue, due to app -->
+      
+   
+      <script src="app.js"></script>
+  </body>
+</html>
