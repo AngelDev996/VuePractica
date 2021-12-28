@@ -6,9 +6,9 @@ const app  =  Vue.createApp({
             url:'https://angeldev996.me',
             showBooks:true,
             books:[
-                {title:'Harry Potter', author:'J.K Rowling'},
-                {title:'Harry Potter2', author:'J.K Rowling'},
-                {title:'Harry Potter3', author:'J.K Rowling'},
+                {title:'Harry Potter', author:'J.K Rowling', isFav:true},
+                {title:'Harry Potter2', author:'J.K Rowling', isFav:false},
+                {title:'Harry Potter3', author:'J.K Rowling', isFav:true},
             ]
         }
     },

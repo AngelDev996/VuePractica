@@ -18,14 +18,14 @@
       }
     </style>
   </head>
-  <body>
+  <body>  
 
       <h1>Hello, Vue</h1>
       <div id="app" >
        <div v-if="showBooks">
          <a v-bind:href="url">My website</a><!--Data binding-->
          <ul>
-           <li v-for="item in books">
+           <li v-for="item in books" :class="{fav:book.isFav}">
              <h3>{{item.title}}</h3>
              <p>{{item.author}}</p>
            </li>
